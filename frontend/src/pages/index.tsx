@@ -128,7 +128,7 @@ export default function Home() {
                 </ThemeIcon>
               }
             >
-              <List.Item>
+              {/* <List.Item>
                 <div>
                   <b>
                     <FormattedMessage id="home.bullet.a.name" />
@@ -152,7 +152,7 @@ export default function Home() {
                   - <FormattedMessage id="home.bullet.c.description" />
                 </div>
               </List.Item>
-            </List>
+            </List> */}
 
             <Group mt={30}>
               <Button
@@ -164,7 +164,7 @@ export default function Home() {
               >
                 <FormattedMessage id="home.button.start" />
               </Button>
-              <Button
+              {/* <Button
                 component={Link}
                 href="https://github.com/stonith404/pingvin-share"
                 target="_blank"
@@ -174,11 +174,11 @@ export default function Home() {
                 className={classes.control}
               >
                 <FormattedMessage id="home.button.source" />
-              </Button>
+              </Button> */}
             </Group>
           </div>
           <Group className={classes.image} align="center">
-            <Logo width={200} height={200} />
+            <Logo height={200} />
           </Group>
         </div>
       </Container>
