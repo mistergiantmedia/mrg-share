@@ -118,6 +118,42 @@ export default function Home() {
               <FormattedMessage id="home.description" />
             </Text>
 
+            <List
+              mt={30}
+              spacing="sm"
+              size="sm"
+              icon={
+                <ThemeIcon size={20} radius="xl">
+                  <TbCheck size={12} />
+                </ThemeIcon>
+              }
+            >
+              <List.Item>
+                <div>
+                  <b>
+                    <FormattedMessage id="home.bullet.a.name" />
+                  </b>{" "}
+                  - <FormattedMessage id="home.bullet.a.description" />
+                </div>
+              </List.Item>
+              <List.Item>
+                <div>
+                  <b>
+                    <FormattedMessage id="home.bullet.b.name" />
+                  </b>{" "}
+                  - <FormattedMessage id="home.bullet.b.description" />
+                </div>
+              </List.Item>
+              <List.Item>
+                <div>
+                  <b>
+                    <FormattedMessage id="home.bullet.c.name" />
+                  </b>{" "}
+                  - <FormattedMessage id="home.bullet.c.description" />
+                </div>
+              </List.Item>
+            </List>
+
             <Group mt={30}>
               <Button
                 component={Link}
@@ -126,23 +162,23 @@ export default function Home() {
                 size="md"
                 className={classes.control}
               >
-                Login
+                <FormattedMessage id="home.button.start" />
               </Button>
               <Button
                 component={Link}
-                href="http://share.mrg.rocks/upload/2d71116b-3120-4fbb-b0c8-7a2de2a204df"
+                href="https://github.com/stonith404/pingvin-share"
                 target="_blank"
                 variant="default"
                 radius="xl"
                 size="md"
                 className={classes.control}
               >
-                Upload to Mister Giant
+                <FormattedMessage id="home.button.source" />
               </Button>
             </Group>
           </div>
           <Group className={classes.image} align="center">
-            <Logo height={200} height={283} />
+            <Logo width={200} height={200} />
           </Group>
         </div>
       </Container>

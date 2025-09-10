@@ -31,10 +31,10 @@ const Footer = () => {
           Powered by{" "}
           <Anchor
             size="xs"
-            href="mistergiant.com"
+            href="https://github.com/stonith404/pingvin-share"
             target="_blank"
           >
-            Mister Giant
+            Pingvin Share
           </Anchor>
         </Text>
         <div>
