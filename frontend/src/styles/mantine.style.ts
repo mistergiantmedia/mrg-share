@@ -8,10 +8,10 @@ colors: {
     "#B3FFF5", // Medium-light - equivalent to #A19DE4
     "#00ffd2", // Base color (your chosen cyan)
     "#00E6BC", // Medium-dark
-    "#00CCA6", // Dark
-    "#00B390", // Darker
-    "#009A7A", // Even darker
-    "#008064", // Very dark
+    "#00ffd2", // Dark
+    "#00ffd2", // Darker
+    "#00ffd2", // Even darker
+    "#00ffd2", // Very dark
     "#00664E", // Darkest
   ],
 },
