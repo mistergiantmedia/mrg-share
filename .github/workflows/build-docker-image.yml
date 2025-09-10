@@ -1,58 +1,32 @@
-name: Build and Push Docker Image
+name: Build Docker Image for Synology
 
 on:
   release:
     types: [published]
-    workflow_dispatch: # Add this line to allow manual triggers
-  push:
-    branches: [ main, master ] # Add this to build on every push (optional)
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
   build:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Docker metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: |
-            ghcr.io/${{ github.repository }}
-            ${{ github.repository }}
-          tags: |
-            type=semver,pattern={{version}},prefix=v
-            type=semver,pattern={{major}}.{{minor}},prefix=v
-            type=semver,pattern={{major}},prefix=v
-
-      - name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password:  ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push
+      - name: Build Docker image
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
-          push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
+          platforms: linux/amd64
+          tags: mrg-share:latest
+          outputs: type=docker,dest=/tmp/mrg-share.tar
+
+      - name: Upload Docker image as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mrg-share-docker-image
+          path: /tmp/mrg-share.tar
+          retention-days: 30
