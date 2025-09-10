@@ -3,6 +3,9 @@ name: Build and Push Docker Image
 on:
   release:
     types: [published]
+    workflow_dispatch: # Add this line to allow manual triggers
+  push:
+    branches: [ main, master ] # Add this to build on every push (optional)
 
 jobs:
   build:
