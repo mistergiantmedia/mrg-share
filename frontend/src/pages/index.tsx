@@ -126,7 +126,7 @@ export default function Home() {
                 size="md"
                 className={classes.control}
               >
-                <FormattedMessage id="home.button.start" />
+                Login
               </Button>
               <Button
                 component={Link}
