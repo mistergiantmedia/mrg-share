@@ -164,9 +164,9 @@ export default function Home() {
               >
                 <FormattedMessage id="home.button.start" />
               </Button>
-              {/* <Button
+              <Button
                 component={Link}
-                href="https://github.com/stonith404/pingvin-share"
+                href="http://share.mrg.rocks/upload/2d71116b-3120-4fbb-b0c8-7a2de2a204df"
                 target="_blank"
                 variant="default"
                 radius="xl"
@@ -174,7 +174,7 @@ export default function Home() {
                 className={classes.control}
               >
                 <FormattedMessage id="home.button.source" />
-              </Button> */}
+              </Button>
             </Group>
           </div>
           <Group className={classes.image} align="center">

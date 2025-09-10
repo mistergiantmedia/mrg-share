@@ -21,12 +21,12 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          tags: mrg-share:latest
-          outputs: type=docker,dest=/tmp/mrg-share.tar
+          tags: mrg-share:${{ github.run_number }}
+          outputs: type=docker,dest=/tmp/mrg-share-${{ github.run_number }}.tar
 
       - name: Upload Docker image as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: mrg-share-docker-image
-          path: /tmp/mrg-share.tar
+          name: mrg-share-docker-image-${{ github.run_number }}
+          path: /tmp/mrg-share-${{ github.run_number }}.tar
           retention-days: 30
