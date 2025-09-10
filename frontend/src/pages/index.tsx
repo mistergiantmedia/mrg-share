@@ -167,7 +167,6 @@ export default function Home() {
               <Button
                 component={Link}
                 href="http://share.mrg.rocks/upload/2d71116b-3120-4fbb-b0c8-7a2de2a204df"
-                target="_blank"
                 variant="default"
                 radius="xl"
                 size="md"
