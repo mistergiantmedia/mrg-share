@@ -4,6 +4,11 @@ const GlobalStyle = () => {
   return (
     <Global
       styles={(theme) => ({
+        body: {
+          backgroundImage: "url('img/mg_wallpaper.png')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        },
         a: {
           color: "inherit",
           textDecoration: "none",
