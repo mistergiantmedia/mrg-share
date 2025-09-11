@@ -26,8 +26,7 @@ Mount path:
 Click Add Folder again
 Second volume:
 
-Folder: Browse to /docker/pingvin (create a public subfolder if needed)
-
+Folder: Browse to /docker/pingvin/public
 Mount path:
 
 /opt/app/frontend/public/img
