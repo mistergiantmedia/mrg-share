@@ -130,7 +130,7 @@ export default function Home() {
               </Button>
               <Button
                 component={Link}
-                href="http://share.mrg.rocks/upload/2d71116b-3120-4fbb-b0c8-7a2de2a204df"
+                href={config.get("legal.imprintUrl") || "#"}
                 variant="default"
                 radius="xl"
                 size="md"
