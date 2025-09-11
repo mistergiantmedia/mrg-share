@@ -18,14 +18,17 @@ Click Add Folder
 First volume:
 
 Folder: Browse to /docker/pingvin
-Mount path: /opt/app/backend/data
+Mount path: 
+/opt/app/backend/data
 
 
 Click Add Folder again
 Second volume:
 
 Folder: Browse to /docker/pingvin (create a public subfolder if needed)
-Mount path: /opt/app/frontend/public/img
+
+Mount path:
+/opt/app/frontend/public/img
 
 
 
